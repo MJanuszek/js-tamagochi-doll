@@ -1,0 +1,57 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 25px;
+}
+
+.wrapper {
+    height: auto;
+    width: 60vw;
+    border: 1px solid black; 
+    padding: 10px 20px;
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+.btn {
+    margin-top: 2vh;
+    font-size: 17px;
+    padding: 5px 5px;
+    background-color: #fff;
+}
+.title, .age {
+    padding: 20px 40px;
+}
+
+.tama-doll {
+    margin-top: 3vh;
+    height: 400px;
+    width: 400px;
+    background-color: #daeedc;
+}
+
+.isHappy, .isHealty, .isTired {
+    margin-top: 2vh;
+    height: 20px;
+    width: 20px;
+    background-color: #35b8ff;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.isHealty {
+    background-color: #efe935;
+}
+.isTired {
+    background-color: #fc61f7;
+}
+
+#taking-care{
+    font-size: 25px;
+    margin-bottom: 3vh;
+}
