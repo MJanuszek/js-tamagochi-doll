@@ -30,11 +30,13 @@ body {
 
 .tama-doll {
     margin-top: 3vh;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     background-color: #daeedc;
 }
-
+.factor {
+    padding: 20px 30px;
+}
 .isHappy, .isHealty, .isTired {
     margin-top: 2vh;
     height: 20px;
