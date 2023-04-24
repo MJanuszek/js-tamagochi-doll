@@ -1,4 +1,5 @@
 const drawBtn = document.querySelector(".draw-btn");
+const tryAgainBtn = document.querySelector(".try-again-btn");
 const tamaDoll = document.querySelector(".tama-doll");
 let ageDiv = document.querySelector(".age");
 // life factor points:
@@ -29,7 +30,6 @@ const drawTamagotchi = () => {
     drawBtn.disabled = true;
     happinesIntervalId = setInterval(removeHappiness, 3000);
     gettingTired = setInterval(addTiredness, 2000)
-    
 }
 
 const isGettingOlder = () => {
@@ -49,8 +49,9 @@ const removeHappiness = () => {
     } else {
         clearInterval(happinesIntervalId);
         happiness.textContent = "Tamagotchi died from unhappiness";
+        ageDiv.textContent = `Your tamagotchi was ${age} seconds old`;
         console.log("Tamagotchi died from unhappiness");
-        drawBtn.disabled = false;
+        clearInterval(gettingTired);
     }
 }
 
@@ -60,14 +61,12 @@ const addTiredness = () => {
     sleepDiv.classList.add("isTired");
 }
 const toTired = () => {
-    if(tiredness.children.length >10){
-        console.log("Tamagotchi died from exhaustion");
+    if(tiredness.children.length>17){
         clearInterval(happinesIntervalId);
         clearInterval(gettingTired);
         clearInterval(startAging);
-        drawBtn.disabled = false;
         tiredness.textContent = "Tamagotchi died from exhaustion";
-
+        ageDiv.textContent = `Your tamagotchi was ${age} seconds old`;
     }
 }
 
@@ -107,5 +106,10 @@ const tamagotchiIsSleeping = () => {
 
 }
 
+const tryAgain = () => {
+    document.location.reload();
+}
+
  drawBtn.addEventListener("click", drawTamagotchi);
+ tryAgainBtn.addEventListener("click", tryAgain);
  careBtn.addEventListener("click", careForTamagotchi);
