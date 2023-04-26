@@ -108,6 +108,7 @@ const tamagotchiIsSleeping = () => {
 
 const tryAgain = () => {
     document.location.reload();
+
 }
 
  drawBtn.addEventListener("click", drawTamagotchi);
